@@ -11,30 +11,24 @@
 </head>
 
 <body>
-
     <p>
         Create Mermaid diagrams from queryParams!
         Ensure you URL encode your markdown before setting queryParms like so:
     </p>
-    
+
     C#:
     <pre>
         $"?diagram={HttpUtility.UrlEncode(mermaid)}"
     </pre>
-    
+
     JS:
     <pre>
         `?diagram=${encodeURI(myMermaidMarkdown)}`
     </pre>
 
     <body>
-        <h2 display="none">Sample Diagram</h2>
-        <div class="mermaid-placeholder" display="none">
-            graph TD
-            A --> B
-            B --> C
-            C
-        </div>
+        <h2>Sample Diagram</h2>
+        <div class="mermaid"> </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </body>
