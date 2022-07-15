@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Mermaid</title>
+    <title>Mermaid Renderer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -12,12 +12,16 @@
 
 <body>
 
-    Create Mermaid diagrams from queryParams!
-    Ensure you URL encode before setting queryParms like so:
+    <p>
+        Create Mermaid diagrams from queryParams!
+        Ensure you URL encode your markdown before setting queryParms like so:
+    </p>
+    
     C#:
     <pre>
         $"?diagram={HttpUtility.UrlEncode(mermaid)}"
     </pre>
+    
     JS:
     <pre>
         `?diagram=${encodeURI(myMermaidMarkdown)}`
