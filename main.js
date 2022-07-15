@@ -1,13 +1,16 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
     const params = Object.fromEntries(new URLSearchParams(location.search));
 
+    var diagramEl = document.querySelector(".mermaid-placeholder");
+    var titleEl = document.querySelector("h2");
+    
     if (params.diagram) {
         console.log("Got diagram", decodeURI(params.diagram))
-        document.querySelector(".mermaid-placeholder").innerHTML = decodeURI(params.diagram);
+        diagramEl.innerHTML = decodeURI(params.diagram);
     }
 
     if (params.title) {
-        document.querySelector("h2").innerText = decodeURI(params.title);
+        titleEl.innerText = decodeURI(params.title);
     }
 
     var config = {
@@ -20,9 +23,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             useMaxWidth: true,
         }
     };
+
     mermaid.initialize(config);
 
-    document.querySelector(".mermaid-placeholder").className = "mermaid"
-    document.querySelector(".mermaid").style.display = "block";
-    document.querySelector("h2").style.display = "block";
+    titleEl.style.display = "block";
+
+    diagramEl.className = "mermaid"
+    diagramEl.style.display = "block";
 })
