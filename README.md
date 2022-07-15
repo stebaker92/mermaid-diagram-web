@@ -1,21 +1,22 @@
 # mermaid-diagram-web
-Allows you to create Mermaid diagrams via query params.
+A web app that allows you to render [Mermaid](https://mermaid-js.github.io/mermaid/#/) diagrams in the browser via query params
 
-## Usage - Supported queryParams
-- `title` - Optional header displayed on the page
+## Query Param Usage
+The following query parameters are supported:
+
+- `title=` - Optional header displayed on the page
 - `diagram` - Mermaid diagram which needs to be URL encoded
 
 
-## Usage JavaScript
+## Usage (JavaScript)
 ```js
-var mermaid = ``
-var url = `${myurl}/?diagram=${encodeURI(mermaid)}`
+var mermaidMarkdown = ``;
+var url = `$https://{myurl}/?diagram=${encodeURI(mermaidMarkdown)}`;
 ```
-
 
 ## Usage (C#)
 ```csharp
-var diagram = "";
+var mermaidMarkdown = "";
 
 Process.Start(new ProcessStartInfo($"https://{myUrl}/?title=My Diagram&diagram={HttpUtility.UrlEncode(mermaidMarkdown)}") { UseShellExecute = true });
 ```
