@@ -11,12 +11,12 @@ The following query parameters are supported:
 ## Usage (JavaScript)
 ```js
 var mermaidMarkdown = ``;
-var url = `$https://{myurl}/?diagram=${encodeURI(mermaidMarkdown)}`;
+var url = `https://stebaker92.github.io/mermaid-diagram-web/?diagram=${encodeURI(mermaidMarkdown)}`;
 ```
 
 ## Usage (C#)
 ```csharp
 var mermaidMarkdown = "";
 
-Process.Start(new ProcessStartInfo($"https://{myUrl}/?title=My Diagram&diagram={HttpUtility.UrlEncode(mermaidMarkdown)}") { UseShellExecute = true });
+Process.Start(new ProcessStartInfo($"https://stebaker92.github.io/mermaid-diagram-web/?title=My Diagram&diagram={HttpUtility.UrlEncode(mermaidMarkdown)}") { UseShellExecute = true });
 ```
