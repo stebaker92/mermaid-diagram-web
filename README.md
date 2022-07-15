@@ -1,6 +1,16 @@
 # mermaid-diagram-web
 A web app that allows you to render [Mermaid](https://mermaid-js.github.io/mermaid/#/) diagrams in the browser via query params
 
+## Sample
+This link will render the following markdown
+```
+graph TD
+Foo --> Bar
+Bar --> Baz
+Baz
+```
+https://stebaker92.github.io/mermaid-diagram-web/?diagram=graph%20TD%0AFoo%20--%3E%20Bar%0ABar%20--%3E%20Baz%0ABaz
+
 ## Query Param Usage
 The following query parameters are supported:
 
