@@ -1,0 +1,7 @@
+* {
+    text-align: center;
+}
+
+svg {
+    max-width: none !important;
+}
