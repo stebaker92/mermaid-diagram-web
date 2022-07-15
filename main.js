@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (params.diagram) {
         console.log("Got diagram", decodeURI(params.diagram))
         diagramEl.innerHTML = decodeURI(params.diagram);
-        titleEl.innerText = decodeURI(params.title);
+        titleEl.innerText = decodeURI(params.title || '');
     }
 
     var config = {
