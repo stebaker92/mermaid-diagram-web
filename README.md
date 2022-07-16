@@ -30,3 +30,7 @@ var mermaidMarkdown = "";
 
 Process.Start(new ProcessStartInfo($"https://stebaker92.github.io/mermaid-diagram-web/?title=My Diagram&diagram={HttpUtility.UrlEncode(mermaidMarkdown)}") { UseShellExecute = true });
 ```
+
+
+## Development & Contribution
+To run this project, just run `npx http-server-spa .`
