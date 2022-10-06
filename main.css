@@ -7,5 +7,6 @@
 }
 
 svg {
-    max-width: none !important;
+    max-width: 1000px;
+    max-height: 800px;
 }
