@@ -1,5 +1,14 @@
-* {
+body {
     text-align: center;
+}
+
+pre {
+    text-align: unset;
+    white-space: pre-line;
+}
+
+summary {
+    cursor: pointer;
 }
 
 .mermaid {

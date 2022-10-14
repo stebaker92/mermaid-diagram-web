@@ -13,19 +13,27 @@
 
 <body>
     <p>
-        Create Mermaid diagrams from queryParams!
-        Ensure you URL encode your markdown before setting queryParms like so:
+        Render Mermaid diagrams from queryParams!
     </p>
 
-    C#:
-    <pre>
-        $"?diagram={HttpUtility.UrlEncode(mermaid)}"
-    </pre>
+    <details>
+        <summary>
+            Usage
+            <span class="icon">👇</span>
+        </summary>
+        Ensure you URL encode your markdown before setting queryParms like so:
+        <p>
+            C#:
+            <pre>
+                $"?diagram={HttpUtility.UrlEncode(mermaid)}&title=Foo"
+            </pre>
 
-    JS:
-    <pre>
-        `?diagram=${encodeURI(myMermaidMarkdown)}`
-    </pre>
+            JS:
+            <pre>
+                `?diagram=${encodeURI(myMermaidMarkdown)}&title=Foo`
+            </pre>
+        </p>
+    </details>
 
     <body>
         <h2></h2>
