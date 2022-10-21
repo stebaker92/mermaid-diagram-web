@@ -11,10 +11,10 @@ Baz
 ```
 https://stebaker92.github.io/mermaid-diagram-web/?diagram=graph%20TD%0AFoo%20--%3E%20Bar%0ABar%20--%3E%20Baz%0ABaz
 
-## Query Param Usage
+## Supported Query Params
 The following query parameters are supported:
 
-- `title=` - Optional header displayed on the page
+- `title` - Optional header displayed on the page
 - `diagram` - Mermaid diagram which needs to be URL encoded
 
 
