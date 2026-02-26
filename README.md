@@ -1,5 +1,10 @@
 # mermaid-diagram-web
-A web app that allows you to render [Mermaid](https://mermaid-js.github.io/mermaid/#/) diagrams in the browser via query params
+A lightweight web app to render [Mermaid](https://mermaid-js.github.io/mermaid/#/) diagrams in the browser via URL query params, great for easily sharing diagrams via links or plaintext
+
+[▶ Visit Site](https://stebaker92.github.io/mermaid-diagram-web)
+
+[▶ View live example](https://stebaker92.github.io/mermaid-diagram-web/?diagram=graph%20TD%0AFoo%20--%3E%20Bar%0ABar%20--%3E%20Baz%0ABaz)
+
 
 ## Sample
 This link will render the following markdown
@@ -33,4 +38,4 @@ Process.Start(new ProcessStartInfo($"https://stebaker92.github.io/mermaid-diagra
 
 
 ## Development & Contribution
-To run this project, just run `npx http-server-spa .`
+To run this project, clone the repo and run `npx http-server-spa .`
