@@ -91,5 +91,6 @@ Clone the repo and run a local server:
 ```bash
 git clone https://github.com/stebaker92/mermaid-diagram-web.git
 cd mermaid-diagram-web
-npx http-server-spa .
+npx serve --single
+
 ```
