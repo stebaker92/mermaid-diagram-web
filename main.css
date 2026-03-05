@@ -52,6 +52,157 @@ summary {
   cursor: pointer;
 }
 
+/* Toolbar */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.15s;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #1f883d;
+  color: white;
+  border-color: rgba(31, 35, 40, 0.15);
+}
+
+.btn-primary:hover {
+  background: #1a7534;
+}
+
+.btn-secondary {
+  background: white;
+  color: #1a1a1a;
+  border-color: rgba(31, 35, 40, 0.2);
+}
+
+.btn-secondary:hover {
+  background: #f3f4f6;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  text-align: left;
+}
+
+.modal-box h3 {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+}
+
+.modal-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #57606a;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.title-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: #f6f8fa;
+  box-sizing: border-box;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.title-input:focus,
+.diagram-textarea:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.15);
+}
+
+.diagram-textarea {
+  width: 100%;
+  min-height: 240px;
+  font-family: 'SF Mono', Consolas, 'Courier New', monospace;
+  font-size: 0.875rem;
+  padding: 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  resize: vertical;
+  background: #f6f8fa;
+  box-sizing: border-box;
+  color: #1a1a1a;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #1a1a1a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Diagram */
 .mermaid {
   color: white;
 }

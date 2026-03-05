@@ -15,31 +15,38 @@
 <body>
     <h1>Mermaid Diagram Renderer</h1>
     <p>
-        Render a Mermaid diagram using markdown from the browsers queryParams. 
-        <br/>This web app makes is possible to share diagrams easily!
+        Render a Mermaid diagram using markdown from the browser's query params.
+        <br/>Share diagrams easily via URL!
     </p>
 
-    <details>
-        <summary>
-            Usage
-            <span class="icon">👇</span>
-        </summary>
-        Ensure you URL encode your markdown before setting queryParms like so:
-        <p>
-            C#:
-            <pre>
-                $"?diagram={HttpUtility.UrlEncode(mermaid)}&title=Foo"
-            </pre>
-
-            JS:
-            <pre>
-                `?diagram=${encodeURI(myMermaidMarkdown)}&title=Foo`
-            </pre>
-        </p>
-    </details>
+    <div class="toolbar">
+        <button class="btn btn-primary" id="editBtn">Edit Diagram</button>
+        <button class="btn btn-secondary" id="shareBtn">Share</button>
+        <button class="btn btn-secondary" id="downloadSvgBtn">Download SVG</button>
+        <button class="btn btn-secondary" id="downloadPngBtn">Download PNG</button>
+        <a class="btn btn-secondary" href="https://mermaid.js.org/intro/" target="_blank" rel="noopener">Mermaid Docs ↗</a>
+    </div>
 
     <h2></h2>
     <div class="mermaid"> </div>
+
+    <!-- Edit Modal -->
+    <div class="modal-overlay" id="editModal">
+        <div class="modal-box">
+            <h3>Edit Diagram</h3>
+            <label class="modal-label" for="titleInput">Title (optional)</label>
+            <input id="titleInput" class="title-input" type="text" placeholder="My Diagram" />
+            <label class="modal-label" for="diagramInput">Diagram</label>
+            <textarea id="diagramInput" class="diagram-textarea" placeholder="Paste your Mermaid diagram here..."></textarea>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                <button class="btn btn-primary" id="updateBtn">Update</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <a class="github-fork-ribbon" href="https://github.com/stebaker92/mermaid-diagram-web" data-ribbon="View me on GitHub" title="Fork me on GitHub">View me on GitHub</a> 
