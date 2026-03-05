@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     titleEl.innerText = currentTitle;
-    if (currentTitle) document.title = `${currentTitle} — Mermaid Renderer`;
+    if (currentTitle) document.title = `${currentTitle} — Mermaid.js Renderer`;
 
     mermaid.initialize({ startOnLoad: false, htmlLabels: true, flowchart: { useMaxWidth: true } });
     renderDiagram(currentDiagram);
