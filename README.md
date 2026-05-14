@@ -2,6 +2,7 @@
 A lightweight web app to render [Mermaid](https://mermaid.js.org) diagrams in the browser via URL query params — great for sharing diagrams as links without any login or setup.
 
 [▶ Visit Site](https://stebaker92.github.io/mermaid-diagram-web)
+
 [▶ View live example](https://stebaker92.github.io/mermaid-diagram-web/?diagram=graph%20TD%0AFoo%20--%3E%20Bar%0ABar%20--%3E%20Baz%0ABaz&title=Example)
 
 ---
