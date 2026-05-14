@@ -2,11 +2,13 @@
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Mermaid.js Renderer</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>Mermaid Diagram Renderer | Mermaid Live Editor, SVG & PNG Export</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+    <link rel="canonical" href="https://stebaker92.github.io/mermaid-diagram-web/" />
+    
     <meta
         name="description"
         content="Render and share Mermaid diagrams instantly via URL. Paste your Mermaid markdown, get a shareable link — no login required."
@@ -29,15 +31,17 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧜‍♀️</text></svg>">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-    <script src='main.js'></script>
+    <script defer src='main.js'></script>
 </head>
 
 <body>
-    <h1>Mermaid Diagram Renderer</h1>
-    <p>
-        Render a Mermaid diagram using markdown from the browser's query params.
-        <br/>Share diagrams easily via URL!
-    </p>
+    <header>
+        <h1>Mermaid Diagram Renderer</h1>
+        <p>
+            Render a Mermaid diagram using markdown from the browser's query params.
+            <br/>Share diagrams easily via URL!
+        </p>
+    </header>
 
     <div class="toolbar">
         <button class="btn btn-primary" id="editBtn">Edit Diagram</button>
@@ -64,10 +68,14 @@
             </div>
         </div>
     </div>
-
+    
+    <noscript>
+        This app requires JavaScript enabled in your browser to render Mermaid diagrams.
+    </noscript>
+    
     <!-- Toast -->
-    <div class="toast" id="toast"></div>
-
+    <div class="toast" id="toast" aria-live="polite"></div>
+    
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
     <a class="github-fork-ribbon" href="https://github.com/stebaker92/mermaid-diagram-web" data-ribbon="View me on GitHub" title="Fork me on GitHub">View me on GitHub</a>
 </body>
